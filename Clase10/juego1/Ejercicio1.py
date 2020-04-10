@@ -45,7 +45,7 @@ if __name__ == "__main__":
         window.fill([0,0,0])
         #Background = pygame.image.load('C:\Users\Jdoo1\Documents\Computacion Grafica\Clase10\juego1\Background.png')
         #window.blit(Background,[0,0])
-        pelota = pygame.image.load('C:\Users\Jdoo1\Documents\Computacion Grafica\Clase10\juego1\pelota.png')
+        pelota = pygame.image.load('C:\Users\Jdoo1\Documents\Compugrafica\Computacion Grafica\Clase10\juego1\pelota.png')
         print pelota.get_rect()
         window.blit(pelota,[posx,posy])
         posx += velx
