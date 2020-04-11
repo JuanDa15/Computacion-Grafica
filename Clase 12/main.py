@@ -33,22 +33,6 @@ if __name__ == "__main__":
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 end = True
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RIGHT:
-                    Player1.velx = Player1.velx + 3
-                    Player1.vely = 0
-                if event.key == pygame.K_LEFT:
-                    Player1.velx = Player1.velx -3
-                    Player1.vely = 0
-                if event.key == pygame.K_UP:
-                    Player1.vely = Player1.vely - 3
-                    Player1.velx = 0
-                if event.key == pygame.K_DOWN:
-                    Player1.vely = Player1.vely + 3
-                    Player1.velx = 0
-            if event.type == pygame.KEYUP:
-                Player1.vely = 0
-                Player1.velx = 0
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     position = Player1.ReturnPosition()
@@ -62,11 +46,9 @@ if __name__ == "__main__":
         for b in Balas:
             if b.rect.x > (width + b.rect.w):
                 Balas.remove(b)
-                       
             if b.getDistance() == 50:
                 Balas.remove(b)
         #Refrescar
-        #PlayersList.update()
         Rivals.update()
         Balas.update()
         window.fill([0,0,0])
