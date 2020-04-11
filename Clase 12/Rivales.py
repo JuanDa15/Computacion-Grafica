@@ -15,7 +15,6 @@ class Rival(pygame.sprite.Sprite):
     def update(self):
         self.rect.x+=self.velx        
         self.rect.y+=self.vely
-           
         if(self.rect.x > width):
             self.rect.x = 0
         elif(self.rect.x < 0):
