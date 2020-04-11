@@ -14,13 +14,13 @@ class Jugador(pygame.sprite.Sprite):
         self.vely = 0
         
     def update(self,pos):
-        self.rect.x = pos[0]
+        self.rect.x = pos[0] - 32
         #self.rect.x+=self.velx
         if self.rect.x > width:
             self.rect.x = 0
         elif self.rect.x < 0:
             self.rect.x = 1080
-        self.rect.y = pos[1]
+        self.rect.y = pos[1] - 32
         #self.rect.y+=self.vely
         if self.rect.y > high:
             self.rect.y = 0

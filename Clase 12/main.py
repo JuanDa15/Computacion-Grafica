@@ -62,7 +62,10 @@ if __name__ == "__main__":
         for b in Balas:
             if b.rect.x > (width + b.rect.w):
                 Balas.remove(b)
-        #Refresco
+                       
+            if b.getDistance() == 50:
+                Balas.remove(b)
+        #Refrescar
         #PlayersList.update()
         Rivals.update()
         Balas.update()
